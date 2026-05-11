@@ -42,4 +42,4 @@ The application is also compatible with mobile browsers on:
 
 See the full developer documentation here:
 
-[Developer Manual](./Doc/Developer Manual.md)
+[Developer Manual](./Doc/Developer-Manual.md)
