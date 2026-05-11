@@ -1,0 +1,318 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #111827;
+}
+
+.dashboard-nav {
+  height: 70px;
+  padding: 0 48px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand,
+.profile,
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo,
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: #16bd7b;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.brand span {
+  color: #16bd7b;
+}
+
+.nav-links a {
+  padding: 12px 18px;
+  border-radius: 10px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.nav-links .active {
+  background: #f1f5f9;
+  color: #111827;
+}
+
+.profile p {
+  margin: 2px 0;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.dashboard {
+  width: 90%;
+  max-width: 1200px;
+  margin: 35px auto;
+}
+
+.welcome h1 {
+  margin-bottom: 6px;
+}
+
+.welcome p,
+.section-header p,
+.panel p,
+.mini-card p,
+.net-worth-card p {
+  color: #94a3b8;
+}
+
+.net-worth-card,
+.mini-card,
+.panel,
+.goal-card,
+.ai-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.035);
+}
+
+.net-worth-card {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  align-items: center;
+}
+
+.net-worth-card h2 {
+  font-size: 56px;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.summary-grid,
+.mini-cards,
+.goals-grid,
+.bottom-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.summary-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mini-cards {
+  margin-top: 25px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mini-card {
+  padding: 22px;
+}
+
+.mini-card h3 {
+  font-size: 24px;
+}
+
+.green {
+  color: #059669;
+}
+
+.red {
+  color: #ef4444;
+}
+
+.ai-card {
+  margin: 25px 0;
+  padding: 22px;
+  background: #e9fff3;
+  color: #047857;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header button,
+.stock-search button {
+  background: #16bd7b;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.goals-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.goal-card {
+  padding: 28px;
+}
+
+.goal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.percent-circle {
+  border: 2px solid #111827;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.progress-line {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 18px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #16bd7b;
+}
+
+.bottom-grid {
+  margin-top: 25px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.panel {
+  padding: 28px;
+}
+
+.debt-item {
+  margin: 18px 0;
+}
+
+.stock-search {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.stock-search input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+#investmentChart {
+  height: 280px !important;
+}
+
+.projection-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 18px;
+  gap: 10px;
+}
+
+.projection-stats strong {
+  color: #059669;
+}
+
+@media (max-width: 900px) {
+  .mini-cards,
+  .goals-grid,
+  .bottom-grid,
+  .net-worth-card {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-nav {
+    padding: 0 18px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+.stock-market-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.stock-card {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.stock-card h3 {
+  margin: 0 0 8px;
+}
+
+.stock-card strong {
+  font-size: 24px;
+  color: #16bd7b;
+}
+
+.stock-card p {
+  margin: 5px 0;
+  color: #64748b;
+}
+.stock-chart-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.stock-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #334155;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.stock-btn:hover {
+  border-color: #6c63ff;
+  color: #6c63ff;
+}
+
+.stock-btn.active {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  color: white;
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}

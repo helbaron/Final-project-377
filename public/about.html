@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Saver - About</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    .about-hero {
+      text-align: center;
+      padding: 60px 24px 40px;
+    }
+
+    .about-hero .icon-box {
+      font-size: 48px;
+      background: linear-gradient(135deg, #16bd7b, #16a34a);
+      border-radius: 20px;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+
+    .about-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .about-hero h1 span {
+      color: #16bd7b;
+    }
+
+    .about-hero p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    .about-card {
+      background: var(--card, #fff);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .about-card .card-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .about-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .about-card p {
+      color: #94a3b8;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .about-mission {
+      max-width: 1100px;
+      margin: 0 auto 40px;
+      padding: 0 24px;
+    }
+
+    .mission-card {
+      background: linear-gradient(135deg, #16bd7b, #16a34a);
+      border-radius: 20px;
+      padding: 48px;
+      color: white;
+      text-align: center;
+    }
+
+    .mission-card h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .mission-card p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      opacity: 0.92;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .tech-section {
+      max-width: 1100px;
+      margin: 0 auto 60px;
+      padding: 0 24px;
+    }
+
+    .tech-section h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+    }
+
+    .tech-pill {
+      background: var(--card, #fff);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .tech-pill .tech-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .tech-pill p {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    .team-section {
+      max-width: 1100px;
+      margin: 0 auto 60px;
+      padding: 0 24px;
+    }
+
+    .team-section h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .team-card {
+      background: var(--card, #fff);
+      border-radius: 16px;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .team-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin: 0 auto 16px;
+      color: white;
+      font-weight: 700;
+    }
+
+    .team-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .team-card p {
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+
+    .back-to-dashboard {
+      display: block;
+      text-align: center;
+      margin: 0 auto 60px;
+    }
+
+    .back-to-dashboard a {
+      display: inline-block;
+      background: #22c55e;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    .back-to-dashboard a:hover {
+      background: #22c55e;
+    }
+    .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;}
+
+    
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  
+  <nav class="dashboard-nav">
+    <div class="brand">
+      <div class="logo">⌬</div>
+    
+      <strong>Future <span>Saver</span></strong>
+    </div>
+
+    <div class="nav-links">
+  <a class="active" href="dashboard.html">Overview</a>
+  <a href="about.html">About Future Saver</a>
+</div>
+
+    <div class="profile">
+      <div class="avatar">
+   <img src="avatar-15.png" alt="avatar" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+      <div>
+        <strong id="profileName"></strong>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="about-hero" data-aos="fade-up">
+      <div class="icon-box">⌬</div>
+      <h1>About <span>Future Saver</span></h1>
+      <p>
+        Future Saver is a personal finance dashboard designed for young adults who are beginning
+  their financial journey. The platform helps users manage savings goals, debt, investments,
+  and spending habits through one centralized and easy-to-use system.
+      </p>
+    </section>
+
+    <!-- MISSION -->
+    <div class="about-mission" data-aos="fade-up">
+      <div class="mission-card">
+        <h2>The Mission</h2>
+        <p>
+  Future Saver was created to help young adults build better financial habits early in life.
+  Many people in their 20s begin earning income for the first time but struggle with budgeting,
+  saving money, managing debt, and understanding investments. Our goal is to provide a simple,
+  centralized platform where users can track savings goals, monitor debt, manage investments,
+  and gain a clearer understanding of their overall financial health in one place.
+        </p>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="about-grid">
+
+      <div class="about-card" data-aos="fade-up">
+        <div class="card-icon">🎯</div>
+        <h3>Savings Goals</h3>
+        <p>Set meaningful savings goals with target dates and amounts. Track how much you've saved and how far you have left to go.</p>
+      </div>
+
+      <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-icon">💳</div>
+        <h3>Debt Tracker</h3>
+        <p>Keep track of all your debts in one place. See your payoff progress and stay motivated as your balances go down.</p>
+      </div>
+
+      <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-icon">↗️</div>
+        <h3>Investments</h3>
+        <p>Log your total invested amount, yearly return, and credit score. Get a full picture of your financial growth over time.</p>
+      </div>
+
+      <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-icon">📈</div>
+        <h3>Live Stock Market</h3>
+        <p>View real-time prices and 30-day trends for AAPL, MSFT, TSLA, and NVDA — powered by the Financial Modeling Prep API.</p>
+      </div>
+
+      <div class="about-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="card-icon">🤖</div>
+        <h3>AI Insights</h3>
+        <p>Get a personalized financial insight based on your savings rate and monthly contributions automatically on your dashboard.</p>
+      </div>
+
+      <div class="about-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="card-icon">🔒</div>
+        <h3>Secure & Private</h3>
+        <p>Your data is stored securely in Supabase. Only you can access your financial profile using your unique user session.</p>
+      </div>
+
+    </div>
+
+    <!-- TOOLS STACK -->
+    <div class="tech-section" data-aos="fade-up">
+      <h2>Built With</h2>
+      <div class="tech-grid">
+        <div class="tech-pill">
+          <div class="tech-icon">🟢</div>
+          <p>Node.js</p>
+        </div>
+        <div class="tech-pill">
+          <div class="tech-icon">⚡</div>
+          <p>Express</p>
+        </div>
+        <div class="tech-pill">
+          <div class="tech-icon">🗄️</div>
+          <p>Supabase</p>
+        </div>
+        <div class="tech-pill">
+          <div class="tech-icon">📊</div>
+          <p>Chart.js</p>
+        </div>
+        <div class="tech-pill">
+          <div class="tech-icon">✨</div>
+          <p>AOS</p>
+        </div>
+        <div class="tech-pill">
+          <div class="tech-icon">📈</div>
+          <p>FMP API</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-section" data-aos="fade-up">
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">H</div>
+          <h3>Hana Elbarony</h3>
+          <p>Developer</p>
+        </div>
+        
+        
+      </div>
+    </div>
+
+    <!-- BACK TO DASHBOARD -->
+    <div class="back-to-dashboard">
+      <a href="dashboard.html">← Back to Dashboard</a>
+    </div>
+
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+</body>
+</html>

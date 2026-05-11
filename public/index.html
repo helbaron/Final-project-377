@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future Saver Setup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+
+    <header class="top-header">
+      <div class="brand">
+        <div class="logo">⌬</div>
+        <h1>Future <span>Saver</span></h1>
+      </div>
+
+      <p class="step-text">Step 1 of 5</p>
+    </header>
+
+    <div class="top-progress">
+      <div class="top-progress-fill"></div>
+    </div>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <p class="sidebar-title">Your Setup</p>
+
+        <div class="step active">
+          <div class="step-number">1</div>
+          <div>
+            <h3>You</h3>
+            <p>Personal info</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div>
+            <h3>Goals</h3>
+            <p>Savings goals</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div>
+            <h3>Debt</h3>
+            <p>Debts & loans</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <div>
+            <h3>Invest</h3>
+            <p>Investments</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">5</div>
+          <div>
+            <h3>Review</h3>
+            <p>Confirm</p>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="progress-label">Progress</p>
+        <div class="small-progress">
+          <div class="small-progress-fill"></div>
+        </div>
+        <p class="complete-text">1 of 5 complete</p>
+      </aside>
+
+      <section class="content">
+        <form class="setup-card" id="aboutForm">
+          <div class="icon-box">♙</div>
+
+          <h2>About You</h2>
+          <p class="subtitle">Let's start with the basics to personalize your dashboard</p>
+
+          <label for="userName">Your Name</label>
+          <input id="userName" type="text" placeholder="e.g. Alex Johnson" required />
+
+          <label for="monthlyIncome">Monthly Income (after tax)</label>
+          <input id="monthlyIncome" type="number" placeholder="5,000" required />
+
+          <label for="monthlyExpenses">Monthly Expenses</label>
+          <input id="monthlyExpenses" type="number" placeholder="3,000" required />
+
+          <p id="formError"></p>
+
+          <button type="submit">Continue →</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Saver - Goals</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-container">
+
+    <!-- HEADER -->
+    <header class="top-header">
+      <div class="brand">
+        <div class="logo">⌬</div>
+        <h1>Future <span>Saver</span></h1>
+      </div>
+      <p class="step-text">Step 2 of 5</p>
+    </header>
+
+    <!-- PROGRESS -->
+    <div class="top-progress">
+      <div class="top-progress-fill" style="width: 40%;"></div>
+    </div>
+
+    <!-- MAIN -->
+    <main class="layout">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <p class="sidebar-title">Your Setup</p>
+
+        <div class="step completed">
+          <div class="step-number">✓</div>
+          <div>
+            <h3>You</h3>
+            <p>Personal info</p>
+          </div>
+        </div>
+
+        <div class="step active">
+          <div class="step-number">2</div>
+          <div>
+            <h3>Goals</h3>
+            <p>Savings goals</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div>
+            <h3>Debt</h3>
+            <p>Debts & loans</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <div>
+            <h3>Invest</h3>
+            <p>Investments</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">5</div>
+          <div>
+            <h3>Review</h3>
+            <p>Confirm</p>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="progress-label">Progress</p>
+        <div class="small-progress">
+          <div class="small-progress-fill" style="width: 40%;"></div>
+        </div>
+        <p class="complete-text">2 of 5 complete</p>
+      </aside>
+
+      <!-- CONTENT -->
+      <section class="content">
+
+        <form class="setup-card" id="goalsForm">
+
+          <div class="icon-box">🎯</div>
+
+          <h2>Savings Goals</h2>
+          <p class="subtitle">What are you saving toward? Add one or more goals.</p>
+
+          <!-- FIRST GOAL -->
+          <div class="goal-box">
+            <p class="goal-number">Goal 1</p>
+
+            <div class="goal-row">
+              <div>
+                <label>Icon</label>
+                <select>
+                  <option>🛡️</option>
+                  <option>🏠</option>
+                  <option>🚗</option>
+                  <option>🎓</option>
+                  <option>✈️</option>
+                  <option>💍</option>
+                  <option>🛍️</option>
+                  <option>💻</option>
+                </select>
+              </div>
+
+              <div class="goal-name">
+                <label>Goal Name</label>
+                <input id="goalName" type="text" placeholder="e.g. Emergency Fund" required>
+              </div>
+            </div>
+
+            <div class="two-columns">
+              <div>
+                <label>Already Saved</label>
+                <input id="alreadySaved" type="number" placeholder="0" required>
+              </div>
+
+              <div>
+                <label>Target Amount</label>
+                <input id="targetAmount" type="number" placeholder="10,000" required>
+              </div>
+            </div>
+
+            <div class="two-columns">
+              <div>
+                <label>Target Date</label>
+                <input id="targetDate" type="date" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- ADD GOAL -->
+          <button type="button" class="add-goal">
+            + Add another goal
+          </button>
+
+          <!-- NAV -->
+          <div class="button-row">
+            <button type="button" class="back-btn" onclick="window.location.href='index.html'">
+              ← Back
+            </button>
+
+            <button type="submit">
+              Continue →
+            </button>
+          </div>
+
+        </form>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="goals.js"></script>
+</body>
+</html>

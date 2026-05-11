@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Saver - Review</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-container">
+
+    <header class="top-header">
+      <div class="brand">
+        <div class="logo">⌬</div>
+        <h1>Future <span>Saver</span></h1>
+      </div>
+      <p class="step-text">Step 5 of 5</p>
+    </header>
+
+    <div class="top-progress">
+      <div class="top-progress-fill" style="width: 100%;"></div>
+    </div>
+
+    <main class="review-layout">
+
+      <section class="review-sidebar">
+        <p class="sidebar-title">Your Setup</p>
+
+        <div class="review-steps">
+          <div class="review-step completed"><span>✓</span> You</div>
+          <div class="review-step completed"><span>✓</span> Goals</div>
+          <div class="review-step completed"><span>✓</span> Debt</div>
+          <div class="review-step completed"><span>✓</span> Invest</div>
+          <div class="review-step active"><span>5</span> Review</div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="setup-card review-card">
+          <div class="icon-box">✓</div>
+
+          <h2>Review Your Profile</h2>
+          <p class="subtitle">Everything look right? You can always update this later.</p>
+
+          <div class="review-section">
+            <h3>👤 Personal</h3>
+            <div class="review-grid">
+              <div>
+                <p>Name</p>
+                <strong id="reviewName">—</strong>
+              </div>
+              <div>
+                <p>Monthly Income</p>
+                <strong id="reviewIncome">—</strong>
+              </div>
+              <div>
+                <p>Savings Rate</p>
+                <strong id="reviewSavingsRate">0%</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-section">
+            <h3>◎ Savings Goals</h3>
+            <div id="reviewGoals">No goals added</div>
+          </div>
+
+          <div class="review-section">
+            <h3>💳 Debts</h3>
+            <div id="reviewDebts">No debts added</div>
+          </div>
+
+          <div class="review-section">
+            <h3>↗ Investments & Credit</h3>
+            <div class="review-grid">
+              <div>
+                <p>Total Invested</p>
+                <strong id="reviewInvested">—</strong>
+              </div>
+              <div>
+                <p>YTD Return</p>
+                <strong id="reviewReturn">0%</strong>
+              </div>
+              <div>
+                <p>Credit Score</p>
+                <strong id="reviewCredit">700 / 850</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="button-row">
+            <button type="button" class="back-btn" onclick="window.location.href='invest.html'">
+              ← Back
+            </button>
+
+            <button type="button" onclick="window.location.href='dashboard.html'">
+              🚀 Launch My Dashboard
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="review.js"></script>
+</body>
+</html>

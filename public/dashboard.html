@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Future Saver Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dashboard.css" />
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- AOS (Animation Library) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="dashboard-nav">
+      <div class="brand">
+        <div class="logo">⌬</div>
+
+        <strong>Future <span>Saver</span></strong>
+      </div>
+
+      <div class="nav-links">
+        <a class="active" href="dashboard.html">Overview</a>
+        <a href="about.html">About Future Saver</a>
+      </div>
+
+      <div class="profile">
+        <div class="avatar">
+          <img
+            src="avatar-15.png"
+            alt="avatar"
+            style="
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              object-fit: cover;
+            "
+          />
+        </div>
+        <div>
+          <strong id="profileName"></strong>
+        </div>
+      </div>
+    </nav>
+
+    <main class="dashboard">
+      <!-- WELCOME -->
+      <section class="welcome">
+        <h1 id="welcomeText">Hello, 👋</h1>
+        <p>Here's your financial overview</p>
+      </section>
+
+      <!-- NET WORTH -->
+      <section class="net-worth-card" data-aos="fade-up">
+        <div>
+          <p>Total Net Worth</p>
+          <h2 id="netWorth">$0</h2>
+          <span class="green">↑ this month</span>
+        </div>
+
+        <div class="summary-grid">
+          <div>
+            <p>Assets</p>
+            <h3 id="assets">$0</h3>
+            <span class="green">↑ 1.2%</span>
+          </div>
+
+          <div>
+            <p>Liabilities</p>
+            <h3 id="liabilities">$0</h3>
+            <span class="red">↓ 3.4%</span>
+          </div>
+
+          <div>
+            <p>Savings Rate</p>
+            <h3 id="savingsRate">0%</h3>
+            <span class="green">↑ 4%</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- MINI CARDS -->
+      <section class="mini-cards">
+        <div class="mini-card" data-aos="fade-up">
+          <p>Monthly Income</p>
+          <h3 id="monthlyIncome">$0</h3>
+        </div>
+
+        <div class="mini-card" data-aos="fade-up">
+          <p>Monthly Expenses</p>
+          <h3 id="monthlyExpenses">$0</h3>
+        </div>
+
+        <div class="mini-card" data-aos="fade-up">
+          <p>Total Invested</p>
+          <h3 id="totalInvested">$0</h3>
+        </div>
+
+        <div class="mini-card" data-aos="fade-up">
+          <p>Credit Score</p>
+          <h3 id="creditScore">700 / 850</h3>
+        </div>
+      </section>
+
+      <!-- AI INSIGHT -->
+      <section class="ai-card" data-aos="fade-up">
+        <strong>AI Insight: You're on track 📈</strong>
+        <p id="aiInsight">Loading your personalized insight...</p>
+      </section>
+
+      <!-- GOALS HEADER -->
+      <section class="section-header">
+        <div>
+          <h2>Savings Goals</h2>
+          <p>Track your progress toward each goal</p>
+        </div>
+        <button onclick="window.location.href = 'goals.html?from=dashboard'">
+          + Add goal
+        </button>
+      </section>
+
+      <!-- GOALS GRID -->
+      <section class="goals-grid" id="goalsGrid"></section>
+
+      <!-- BOTTOM SECTION -->
+      <section class="bottom-grid">
+        <!-- DEBT -->
+        <div class="panel" data-aos="fade-up">
+          <div class="section-header">
+            <div>
+              <h2>Debt Payoff Tracker</h2>
+              <p id="debtSummary">$0 remaining</p>
+            </div>
+            <button onclick="window.location.href = 'debt.html?from=dashboard'">
+              + Add debt
+            </button>
+          </div>
+          <div id="debtList"></div>
+        </div>
+
+        <!-- CHART -->
+        <div class="panel" data-aos="fade-up">
+          <h2>Net Worth Breakdown</h2>
+          <p>Assets vs Liabilities</p>
+          <canvas id="netWorthChart" height="250"></canvas>
+        </div>
+
+        <!-- INVESTMENTS -->
+        <div class="panel" data-aos="fade-up">
+          <h2>Current Stock Market</h2>
+          <p>Live market data</p>
+          <div id="stockMarketGrid" class="stock-market-grid">
+            <p>Loading stock market data...</p>
+          </div>
+        </div>
+        <!-- STOCK CHART -->
+        <div class="panel" data-aos="fade-up">
+          <h2>Stock Price Trend</h2>
+          <div class="stock-chart-controls">
+            <button class="stock-btn active" onclick="selectStock('AAPL')">
+              AAPL
+            </button>
+            <button class="stock-btn" onclick="selectStock('MSFT')">
+              MSFT
+            </button>
+            <button class="stock-btn" onclick="selectStock('TSLA')">
+              TSLA
+            </button>
+            <button class="stock-btn" onclick="selectStock('NVDA')">
+              NVDA
+            </button>
+          </div>
+          <canvas id="stockLineChart" height="250"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <!-- JS -->
+    <script src="dashboard.js"></script>
+
+    <!-- AOS INIT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
